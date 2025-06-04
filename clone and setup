@@ -1,0 +1,13 @@
+clone setup the livePortrait Repository
+
+python code:
+
+# Clone the LivePortrait repository
+!git clone https://github.com/KwaiVGI/LivePortrait.git
+%cd LivePortrait
+
+# Install required packages
+!pip install -r requirements.txt
+
+# If specific packages are missing:
+!pip install imageio opencv-python torch torchvision
