@@ -1,0 +1,22 @@
+Here’s how to measure inference time and baseline output:
+
+import torch
+import time
+from demo import live_demo  # Or the appropriate entry point
+from torchvision import transforms
+import cv2
+
+# Set device
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# Dummy input
+source_image = 'path/to/source.jpg'
+driving_video = 'path/to/driving.mp4'
+
+start_time = time.time()
+live_demo(source_image, driving_video, result_video='output_original.mp4')
+end_time = time.time()
+
+print(f"Inference Time (Original): {end_time - start_time:.2f} seconds")
+
+ Run this block and save the output and video result to show as baseline.
